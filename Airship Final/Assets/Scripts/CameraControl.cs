@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public GameObject cam;
-    public Transform playerShip;
     public float startDistance = 3f;
     public float rotateRate = 1f;
     public float moveRate = 1f;
@@ -15,32 +14,32 @@ public class CameraControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = playerShip.position + new Vector3(0f, 0f, (maxDistance - minDistance)/2f + minDistance);
+        transform.position = gameObject.transform.position + new Vector3(0f, 0f, (maxDistance - minDistance)/2f + minDistance);
     }
 
     // Update is called once per frame
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X");
-        transform.RotateAround(playerShip.position, transform.up, rotateRate * mouseX);
+        transform.RotateAround(gameObject.transform.position, transform.up, rotateRate * mouseX);
 
         float mouseY = Input.GetAxis("Mouse Y");
-        Vector3.MoveTowards(transform.position, playerShip.position, moveRate * mouseY);
+        Vector3.MoveTowards(transform.position, gameObject.transform.position, moveRate * mouseY);
 
-        float distance = Vector3.Distance(transform.position, playerShip.position);
-        Vector3 direction = transform.position - playerShip.position;
+        float distance = Vector3.Distance(transform.position, gameObject.transform.position);
+        Vector3 direction = transform.position - gameObject.transform.position;
 
         Debug.Log(distance);
 
         if (distance > maxDistance)
         {
-            transform.position = direction.normalized * maxDistance + playerShip.position;
+            transform.position = direction.normalized * maxDistance + gameObject.transform.position;
         }
         if (distance < minDistance)
         {
-            transform.position = direction.normalized * minDistance + playerShip.position;
+            transform.position = direction.normalized * minDistance + gameObject.transform.position;
         }
 
-        transform.LookAt(playerShip);
+        transform.LookAt(gameObject.transform);
     }
 }
