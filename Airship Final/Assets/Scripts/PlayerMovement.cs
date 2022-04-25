@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Debug.Log(speedLevel);
-        Debug.Log(transform.forward);
+        //Debug.Log(transform.forward);
         //Debug.Log(rb.velocity.normalized);
     }
 }
