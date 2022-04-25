@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float pitchSpeed;
     public float rotateSpeed;
+    public float yawSpeed;
     public float maxSpeed;
     public float accelRate;
     public float maxAccel;
@@ -28,19 +29,27 @@ public class PlayerMovement : MonoBehaviour
     { 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Rotate(-.5f * pitchSpeed, 0, 0, Space.Self);
+            transform.Rotate(-0.5f * pitchSpeed, 0, 0, Space.Self);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Rotate(.5f * pitchSpeed, 0, 0, Space.Self);
+            transform.Rotate(0.5f * pitchSpeed, 0, 0, Space.Self);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0, 0, .5f * pitchSpeed, Space.Self);
+            transform.Rotate(0, 0, 0.5f * pitchSpeed, Space.Self);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0, 0, -.5f * pitchSpeed, Space.Self);
+            transform.Rotate(0, 0, -0.5f * pitchSpeed, Space.Self);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(0, -0.1f * pitchSpeed, 0, Space.Self);
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(0, 0.1f * pitchSpeed, 0, Space.Self);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
