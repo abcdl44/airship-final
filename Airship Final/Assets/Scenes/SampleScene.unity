@@ -370,6 +370,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair: {fileID: 2800000, guid: c47ef1e1920f19a43b90551805c1a2df, type: 3}
+  maxHorizontalDegrees: 60
+  maxVerticalDegrees: 45
+  aimRate: 3
+  released: 0
 --- !u!1 &1023998905
 GameObject:
   m_ObjectHideFlags: 0
