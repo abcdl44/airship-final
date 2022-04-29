@@ -17,6 +17,7 @@ public class CameraControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         transform.position = playerShip.transform.position - new Vector3(0f, 0f, maxDistance);
         currentDistance = maxDistance;
         direction = transform.position - playerShip.transform.position;
