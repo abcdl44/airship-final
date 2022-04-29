@@ -85,9 +85,20 @@ public class CameraControl : MonoBehaviour
     }
 
 
-    // This problem is annoying. Need to figure out whether camera is on the left or the right of the ship
+    // Returns whether the camera is facing closer to the ship's local left or right
     private bool IsLeft()
     {
-        return true;
+        float angle = Vector3.SignedAngle(transform.forward, playerShip.transform.forward, playerShip.transform.up);
+        if (angle < 0)
+        {
+            Debug.Log("right");
+            return false;
+        }
+        else
+        {
+            Debug.Log("left");
+            return true;
+        }
+        
     }
 }
