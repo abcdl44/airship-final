@@ -8,7 +8,7 @@ public class Shooting : MonoBehaviour
     public GameObject projectile;
     public int gunCount;
     public float reloadTime;
-    public float shipLength = 1f; // If we ever get ship customization we'll need to change this
+    public float shipLength = 1.5f; // If we ever get ship customization we'll need to change this
 
     private float[] reloadsLeft;
     private float[] reloadsRight;
@@ -23,11 +23,11 @@ public class Shooting : MonoBehaviour
 
         // so the guns don't all fire from the same spot
         gunPositions = new float[gunCount];
-        float l = shipLength/(gunCount + 2);
+        float l = shipLength/(gunCount);
         for (int x = 0; x < gunCount; x++)
         {
             gunPositions[x] = shipLength;
-            shipLength += shipLength / (gunCount + 2);
+            shipLength += shipLength / (gunCount);
         }
 
     }
@@ -96,20 +96,46 @@ public class Shooting : MonoBehaviour
         {
             // fires projectile, with a little bit of offset based on gunPosition, and adjusts it so it doesn't clip the ship on spawn
             // offset and direction not functional, rather than firing off of camera, it should fire off of ship left/right
-            Vector3 pos = playerShip.transform.position - playerShip.transform.forward * gunPositions[x] + transform.forward * .25f;
+            Vector3 pos = playerShip.transform.position - playerShip.transform.forward * gunPositions[x] * 0.5f;
             GameObject obj = Instantiate(projectile, pos, Quaternion.identity);
 
-            obj.GetComponent<ProjectileInfo>().direction = transform.forward;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                obj.GetComponent<ProjectileInfo>().direction = transform.forward;
+            }
+            else
+            {
+                // holy shit close your eyes it's ugly
+                playerShip.transform.Rotate(0, -90f, 0);
+                Vector3 v = playerShip.transform.forward;
+                playerShip.transform.Rotate(0, 90f, 0);
+
+                obj.GetComponent<ProjectileInfo>().direction = v;
+                
+            }
 
             reloadsLeft[x] = reloadTime;
             return true;
         }
         if (!isLeft && reloadsRight[x] == 0)
         {
-            Vector3 pos = playerShip.transform.position - playerShip.transform.forward * gunPositions[x] + transform.forward * .25f;
+            Vector3 pos = playerShip.transform.position - playerShip.transform.forward * gunPositions[x] * 0.5f;
             GameObject obj = Instantiate(projectile, pos, Quaternion.identity);
 
-            obj.GetComponent<ProjectileInfo>().direction = transform.forward;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                obj.GetComponent<ProjectileInfo>().direction = transform.forward;
+            }
+            else
+            {
+                // holy shit close your eyes it's ugly
+                playerShip.transform.Rotate(0, 90f, 0);
+                Vector3 v = playerShip.transform.forward;
+                playerShip.transform.Rotate(0, -90f, 0);
+
+                obj.GetComponent<ProjectileInfo>().direction = v;
+
+            }
 
             reloadsRight[x] = reloadTime;
             return true;

@@ -392,7 +392,7 @@ MonoBehaviour:
   projectile: {fileID: 2744929158855596004, guid: 2350ba567f352924995e88cbdf04eb0b, type: 3}
   gunCount: 3
   reloadTime: 2
-  shipLength: 1
+  shipLength: 1.5
 --- !u!1 &1023998905
 GameObject:
   m_ObjectHideFlags: 0

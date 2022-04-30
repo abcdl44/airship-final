@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileInfo : MonoBehaviour
 {
     public Vector3 direction;
-    public float thrust = 10000f; // No idea how this actually translates to velocity mathematically
+    public float thrust = 100f; // No idea how this actually translates to velocity mathematically
 
     void Start()
     {
