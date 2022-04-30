@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -14,9 +15,15 @@ public class Shooting : MonoBehaviour
     private float[] reloadsRight;
 
     private float[] gunPositions;
+    private GameObject blasterL;
+    private GameObject blasterR;
 
     void Start()
     {
+        //Initialize the reload indicators
+        blasterL = GameObject.Find("Left BlasterG Indicator"); //Need to edit once we have more weapons
+        blasterR = GameObject.Find("Right BlasterG Indicator");
+
         // default values should be 0
         reloadsLeft = new float[gunCount];
         reloadsRight = new float[gunCount];
@@ -47,9 +54,25 @@ public class Shooting : MonoBehaviour
             {
                 reloadsLeft[i] = 0f;
             }
-            if (reloadsRight[i] < 0)
-            {
+            if (reloadsRight[i] < 0) {
                 reloadsRight[i] = 0f;
+            }
+
+            if (reloadsLeft[i] == 0)
+            {
+                blasterL.GetComponent<Image>().color = Color.white; //Blaster UI shows the gun is ready
+            }
+            if (reloadsRight[i] == 0) {
+                blasterR.GetComponent<Image>().color = Color.white; //Blaster UI shows the gun is ready
+            }
+
+            if (reloadsLeft[i] > 0)
+            {
+                blasterL.GetComponent<Image>().color = Color.gray; //Blaster UI shows the gun is not ready
+            }
+            if (reloadsRight[i] > 0)
+            {
+                blasterR.GetComponent<Image>().color = Color.gray; //Blaster UI shows the gun is not ready
             }
         }
 

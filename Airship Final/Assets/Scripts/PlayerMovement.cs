@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private int speedLevel;
     private float[] speeds;
-    private float speed;
+    public float speed;
     private Rigidbody rb;
 
     void Start()
