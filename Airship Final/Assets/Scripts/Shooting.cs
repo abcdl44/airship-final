@@ -164,5 +164,13 @@ public class Shooting : MonoBehaviour
             return true;
         }
         return false;
-    } 
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+      if (collision.gameObject.tag == "Player Projectile")
+      {
+          Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
+      }
+    }
 }

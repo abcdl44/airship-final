@@ -42,7 +42,6 @@ public class EnemyShip : MonoBehaviour
     {
         if (other.collider.tag == "Player Projectile") {
             detectionRange = 2000;
-            speed *= 2;
         }
     }
 }

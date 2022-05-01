@@ -5,13 +5,13 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 100;
-    GameObject enemy;
     ParticleSystem explosion;
+    public EnemyHealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
-    {
-        enemy = GameObject.Find("Enemy Ship");
+    {  
+        healthBar.SetHealth(health, 100);
         explosion = GetComponent<ParticleSystem>();
         explosion.Stop();
     }
@@ -29,12 +29,13 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log(health);
         if (other.collider.tag == "Player Projectile") {
             health -= 10;
+            healthBar.SetHealth(health, 100);
         }
     }
 
     IEnumerator Exploder() {
         explosion.Play();
         yield return new WaitForSeconds(1);
-        enemy.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
