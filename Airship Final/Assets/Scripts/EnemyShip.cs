@@ -20,7 +20,6 @@ public class EnemyShip : MonoBehaviour
     void Update()
     {
         float currDist = Vector3.Distance(player.transform.position, transform.position);
-        Debug.Log(currDist);
 
         if (currDist > detectionRange) { //Ship minds its own business if out of range
             transform.position += transform.forward * Time.deltaTime * speed;
