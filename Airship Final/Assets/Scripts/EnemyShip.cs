@@ -8,6 +8,7 @@ public class EnemyShip : MonoBehaviour
     public float shootingRange;
     public float detectionRange;
     public float speed;
+    private float currDist;
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +20,11 @@ public class EnemyShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float currDist = Vector3.Distance(player.transform.position, transform.position);
+        currDist = Vector3.Distance(player.transform.position, transform.position);
+        Debug.Log(currDist);
 
         if (currDist > detectionRange) { //Ship minds its own business if out of range
-            transform.position += transform.forward * Time.deltaTime * speed;
+            transform.position += transform.forward * Time.deltaTime * speed*0.75f;
         } else if (currDist <= detectionRange && currDist > shootingRange) { //Ship sees you and moves closer to get in weapon range
             transform.LookAt(player.transform.position);
             transform.position += transform.forward * Time.deltaTime * speed;
@@ -33,6 +35,14 @@ public class EnemyShip : MonoBehaviour
             {
                 blaster.Shoot();
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.tag == "Player Projectile") {
+            detectionRange = 2000;
+            speed *= 2;
         }
     }
 }
