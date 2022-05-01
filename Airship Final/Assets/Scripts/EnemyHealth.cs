@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int health = 100;
-    GameObject player;
+    GameObject enemy;
     ParticleSystem explosion;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player Ship");
+        enemy = GameObject.Find("Enemy Ship");
         explosion = GetComponent<ParticleSystem>();
         explosion.Stop();
     }
@@ -19,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(health);
         if (health <= 0) {
             StartCoroutine(Exploder());
         }
@@ -27,7 +26,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.tag == "Enemy Projectile") {
+        Debug.Log(health);
+        if (other.collider.tag == "Player Projectile") {
             health -= 10;
         }
     }
@@ -35,6 +35,6 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator Exploder() {
         explosion.Play();
         yield return new WaitForSeconds(1);
-        player.SetActive(false);
+        enemy.SetActive(false);
     }
 }
