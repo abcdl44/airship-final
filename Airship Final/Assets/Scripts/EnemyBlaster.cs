@@ -7,16 +7,20 @@ public class EnemyBlaster : MonoBehaviour
     public GameObject projectile;
     public float reloadTime;
     private float currReload;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player Ship");
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.LookRotation(transform.position - GameObject.Find("Player Ship").transform.position);
+        if (player.activeSelf) {
+            transform.rotation = Quaternion.LookRotation(transform.position - player.transform.position);
+        }
         float t = Time.deltaTime;
         currReload -= t;
         if (currReload < 0) {

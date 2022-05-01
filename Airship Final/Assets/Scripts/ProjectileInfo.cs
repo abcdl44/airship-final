@@ -10,13 +10,13 @@ public class ProjectileInfo : MonoBehaviour
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        Debug.Log(direction * thrust);
+        //Debug.Log(direction * thrust);
         rb.AddForce(direction * thrust);
     }
 
     // Unimplemented
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("xddd");
+        
     }
 }
