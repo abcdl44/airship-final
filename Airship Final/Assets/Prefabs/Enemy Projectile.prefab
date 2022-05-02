@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6189563840621410514}
   - component: {fileID: -3512766089177734812}
   - component: {fileID: 8235332429285220481}
+  - component: {fileID: -2926618986922913167}
   m_Layer: 0
   m_Name: Enemy Projectile
   m_TagString: Untagged
@@ -141,3 +142,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
   thrust: 1000
+--- !u!114 &-2926618986922913167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744929158855596004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b4336c87af98940bd4a0cd3d27b939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

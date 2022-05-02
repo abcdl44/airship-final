@@ -5,13 +5,14 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 100;
+    public int maxHealth = 100;
     ParticleSystem explosion;
     public EnemyHealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {  
-        healthBar.SetHealth(health, 100);
+        healthBar.SetHealth(health, maxHealth);
         explosion = GetComponent<ParticleSystem>();
         explosion.Stop();
     }
@@ -26,10 +27,10 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(health);
+        //Debug.Log(health);
         if (other.collider.tag == "Player Projectile") {
             health -= 10;
-            healthBar.SetHealth(health, 100);
+            healthBar.SetHealth(health, maxHealth);
         }
     }
 

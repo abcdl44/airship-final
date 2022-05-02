@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     IEnumerator Exploder() {
-        explosion.Play();
+        explosion.Play();   
         yield return new WaitForSeconds(1);
         player.SetActive(false);
     }
