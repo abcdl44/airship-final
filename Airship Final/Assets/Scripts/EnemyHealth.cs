@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        //Debug.Log(health);
+        Debug.Log(health);
         if (other.collider.tag == "Player Projectile") {
             health -= 10;
             healthBar.SetHealth(health, maxHealth);

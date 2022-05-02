@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         speedLevel = 4; // 7 levels of speed - (Full, 3/4, Half, 1/4, Still, -1/2, -Full), 0-6 respectively
         speeds = new float[] { maxSpeed, .75f * maxSpeed, .5f * maxSpeed, .25f * maxSpeed, 0, -.25f * maxSpeed, -.5f * maxSpeed };
         speed = speeds[speedLevel];
+        gameObject.tag = "Player Ship";
     }
 
     // Update is called once per frame
