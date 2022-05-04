@@ -34,6 +34,10 @@ public class PlayerHealth : MonoBehaviour
         if (other.collider.tag == "Rocket") {
             health -= 50;
         }
+
+        if (other.collider.tag == "Dread Projectile") {
+            health -= 40;
+        }
     }
 
     IEnumerator Exploder() {

@@ -8,6 +8,7 @@ TagManager:
   - Enemy Projectile
   - Rocket
   - Player Ship
+  - Dread Projectile
   layers:
   - Default
   - TransparentFX

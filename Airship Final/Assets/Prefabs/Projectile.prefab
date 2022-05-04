@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  thrust: 2000
+  thrust: 3000
 --- !u!114 &-965977237588327686
 MonoBehaviour:
   m_ObjectHideFlags: 0

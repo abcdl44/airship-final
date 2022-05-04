@@ -11,7 +11,7 @@ public class EnemyExhaust : MonoBehaviour
     void Start()
     {
         exhaust = GetComponent<ParticleSystem>();
-        ship = GameObject.Find("Enemy Ship");
+        ship = transform.parent.gameObject;
     }
 
     // Update is called once per frame
