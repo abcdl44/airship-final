@@ -35,6 +35,6 @@ public class Rocket : MonoBehaviour
             explosion.Play();
         }
         yield return new WaitForSeconds(1);
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
