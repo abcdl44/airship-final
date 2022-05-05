@@ -6,17 +6,13 @@ public class ProjectileInfo : MonoBehaviour
 {
     public Vector3 direction;
     public float thrust = 100f; // No idea how this actually translates to velocity mathematically
+    AudioSource pew;
 
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        //Debug.Log(direction * thrust);
         rb.AddForce(direction * thrust);
-    }
-
-    // Unimplemented
-    void OnCollisionEnter(Collision collision)
-    {
-        
+        pew = GetComponent<AudioSource>();
+        pew.Play();
     }
 }

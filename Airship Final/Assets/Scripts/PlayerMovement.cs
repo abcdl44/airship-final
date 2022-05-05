@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private Rigidbody rb;
 
+    AudioSource sound;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         speeds = new float[] { maxSpeed, .75f * maxSpeed, .5f * maxSpeed, .25f * maxSpeed, 0, -.25f * maxSpeed, -.5f * maxSpeed };
         speed = speeds[speedLevel];
         gameObject.tag = "Player Ship";
+        sound = (AudioSource)GetComponents(typeof(AudioSource))[1];
     }
 
     // Update is called once per frame
@@ -66,6 +69,21 @@ public class PlayerMovement : MonoBehaviour
             {
                 speedLevel += 1;
             }
+        }
+
+        if (speedLevel != 4)
+        {
+            sound.loop = true;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+            
+        }
+        else
+        {
+            sound.loop = false;
+            sound.Stop();
         }
 
         // Goal of acceleration/deaccel: slow down/speed up to meet targeted speed rather than immediate change

@@ -5,8 +5,14 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     Transform target;
-    public float speed;
+    public float speed = 6f;
     ParticleSystem explosion;
+
+    AudioSource beep;
+    AudioSource boom;
+    public AudioClip[] booms;
+
+    float time;
 
     private void Start()
     {
@@ -14,10 +20,23 @@ public class Rocket : MonoBehaviour
         target = GameObject.Find("Player Ship").transform;
         explosion = GetComponent<ParticleSystem>();
         explosion.Stop();
+
+        beep = (AudioSource)GetComponents(typeof(AudioSource))[0];
+        boom = (AudioSource)GetComponents(typeof(AudioSource))[1];
+
+        time = 0;
     }
  
     private void Update()
     {
+        time += Time.deltaTime;
+
+        if (time > .2f)
+        {
+            beep.Play();
+            time = 0;
+        }
+        
         gameObject.transform.LookAt(target);
         gameObject.transform.Rotate(90,0,0);
 
@@ -31,10 +50,14 @@ public class Rocket : MonoBehaviour
     }
 
     IEnumerator Exploder() {
+        boom.volume = 1.0f;
+        boom.clip = booms[Random.Range(0, booms.Length)];
+        boom.Play();
+
         if (explosion.isStopped) {
             explosion.Play();
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.5f);
         Destroy(gameObject);
     }
 }

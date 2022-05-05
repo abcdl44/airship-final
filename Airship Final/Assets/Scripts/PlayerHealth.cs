@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 100;
+    public int health = 200;
     GameObject player;
     ParticleSystem explosion;
+
+    AudioSource ow;
+    public AudioClip[] explosions;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
         player = GameObject.Find("Player Ship");
         explosion = GetComponent<ParticleSystem>();
         explosion.Stop();
+
+        ow = (AudioSource)GetComponents(typeof(AudioSource))[2];
     }
 
     // Update is called once per frame
@@ -41,8 +46,17 @@ public class PlayerHealth : MonoBehaviour
     }
 
     IEnumerator Exploder() {
+        yield return new WaitForSeconds(.5f);
+
+        ow.clip = explosions[Random.Range(0, explosions.Length)];
+        Debug.Log(ow.clip);
+        ow.spatialBlend = 0.0f;
+        ow.volume = 1.0f;
+        ow.Play();
+
         explosion.Play();   
         yield return new WaitForSeconds(1);
+
         player.SetActive(false);
     }
 }

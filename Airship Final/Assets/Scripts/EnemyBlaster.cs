@@ -9,10 +9,14 @@ public class EnemyBlaster : MonoBehaviour
     private float currReload;
     private GameObject player;
 
+    AudioSource shootSound;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player Ship");
+        shootSound = GetComponent<AudioSource>();
+        shootSound.loop = false;
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class EnemyBlaster : MonoBehaviour
             GameObject obj = Instantiate(projectile, transform.position, Quaternion.identity);
             obj.GetComponent<ProjectileInfo>().direction = -transform.forward;
             currReload = reloadTime;
+            shootSound.Play();
         }
     }
 }

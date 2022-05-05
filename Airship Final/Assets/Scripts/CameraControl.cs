@@ -14,6 +14,8 @@ public class CameraControl : MonoBehaviour
     private float currentDistance;
     private Vector3 direction;
 
+    AudioSource sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,10 @@ public class CameraControl : MonoBehaviour
         transform.position = playerShip.transform.position - new Vector3(0f, 0f, maxDistance);
         currentDistance = maxDistance;
         direction = transform.position - playerShip.transform.position;
+
+        sound = GetComponent<AudioSource>();
+        sound.loop = true;
+        sound.Play();
     }
 
     // Update is called once per frame
@@ -92,12 +98,10 @@ public class CameraControl : MonoBehaviour
         float angle = Vector3.SignedAngle(transform.forward, playerShip.transform.forward, playerShip.transform.up);
         if (angle < 0)
         {
-            Debug.Log("right");
             return false;
         }
         else
         {
-            Debug.Log("left");
             return true;
         }
         
