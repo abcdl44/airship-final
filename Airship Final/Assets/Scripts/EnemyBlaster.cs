@@ -6,10 +6,12 @@ public class EnemyBlaster : MonoBehaviour
 {
     public GameObject projectile;
     public float reloadTime;
+   
     private float currReload;
     private GameObject player;
 
     AudioSource shootSound;
+    float coneOfFire = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +35,12 @@ public class EnemyBlaster : MonoBehaviour
     }
 
     public void Shoot() {
-        if (currReload == 0) {
+        if (currReload == 0) { 
             GameObject obj = Instantiate(projectile, transform.position, Quaternion.identity);
-            obj.GetComponent<ProjectileInfo>().direction = -transform.forward;
+
+            Quaternion randAim = Quaternion.Euler(Random.Range(-coneOfFire, coneOfFire), Random.Range(-coneOfFire, coneOfFire), 0);
+
+            obj.GetComponent<ProjectileInfo>().direction = randAim  * - transform.forward;
             currReload = reloadTime;
             shootSound.Play();
         }

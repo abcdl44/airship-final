@@ -28355,7 +28355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -681878344141261621, guid: dfa947209137d2e44a293a22f8622e1c, type: 3}
       propertyPath: delay
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6994414002588177290, guid: dfa947209137d2e44a293a22f8622e1c, type: 3}
       propertyPath: m_RootOrder

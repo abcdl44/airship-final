@@ -76,8 +76,6 @@ public class CameraControl : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log(direction);
         Reset(currentDistance, direction);
     }
 
