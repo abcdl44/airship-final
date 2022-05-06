@@ -10370,6 +10370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blasterE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2adf562f5ae97bb4ea94711508c21449, type: 3}
+      propertyPath: m_TagString
+      value: Enemy Blaster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2adf562f5ae97bb4ea94711508c21449, type: 3}
 --- !u!4 &1229729948489931657 stripped
@@ -10558,6 +10562,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2adf562f5ae97bb4ea94711508c21449, type: 3}
       propertyPath: m_Name
       value: blasterE
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2adf562f5ae97bb4ea94711508c21449, type: 3}
+      propertyPath: m_TagString
+      value: Enemy Blaster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2adf562f5ae97bb4ea94711508c21449, type: 3}

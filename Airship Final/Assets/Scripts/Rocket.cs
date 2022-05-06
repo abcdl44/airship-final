@@ -33,7 +33,9 @@ public class Rocket : MonoBehaviour
 
         if (time > .2f)
         {
-            beep.Play();
+            if (beep != null) {
+                beep.Play();
+            }
             time = 0;
         }
         
