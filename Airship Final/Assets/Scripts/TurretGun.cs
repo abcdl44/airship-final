@@ -12,6 +12,7 @@ public class TurretGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(reloadTime);
         if (Time.time >= delay) {
             float t = Time.deltaTime;
             currReload -= t;

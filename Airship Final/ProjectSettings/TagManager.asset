@@ -9,6 +9,10 @@ TagManager:
   - Rocket
   - Player Ship
   - Dread Projectile
+  - Barrel
+  - Double Barrel
+  - Turret
+  - Double Turret
   layers:
   - Default
   - TransparentFX
