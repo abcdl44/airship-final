@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 3471607867978429791}
   m_Layer: 0
   m_Name: turret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5102,7 +5102,7 @@ GameObject:
   - component: {fileID: 8330546228610617849}
   m_Layer: 0
   m_Name: Barrel 2
-  m_TagString: Untagged
+  m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5185,6 +5185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5169623685524279031, guid: f45fa6e4d65e9f945a0f35335f04fc50, type: 3}
   reloadTime: 100
+  naturalReload: 0
   delay: 0
 --- !u!1 &8330546226992153781
 GameObject:
@@ -5592,7 +5593,7 @@ GameObject:
   - component: {fileID: 8330546227233362971}
   m_Layer: 0
   m_Name: Barrel 1
-  m_TagString: Untagged
+  m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5675,6 +5676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5169623685524279031, guid: f45fa6e4d65e9f945a0f35335f04fc50, type: 3}
   reloadTime: 100
+  naturalReload: 0
   delay: 0
 --- !u!1 &9177599891252037833
 GameObject:

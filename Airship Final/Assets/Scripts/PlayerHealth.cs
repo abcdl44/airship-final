@@ -49,7 +49,6 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         ow.clip = explosions[Random.Range(0, explosions.Length)];
-        Debug.Log(ow.clip);
         ow.spatialBlend = 0.0f;
         ow.volume = 1.0f;
         ow.Play();
