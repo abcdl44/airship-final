@@ -52,11 +52,11 @@ public class CameraControl : MonoBehaviour
 
         float mouseX = Input.GetAxis("Mouse X");
         transform.RotateAround(playerShip.transform.position, transform.up, rotateRate * mouseX);
+        if (mouseX != 0)
+        {
+            direction = transform.position - playerShip.transform.position;
+        }
 
-        /* if (mouseX != 0) {
-         * direction = transform.position - playerShip.transform.position;
-         * }  Possible fix for camera automatically recentering when moving too fast, but stutters so idk */
-        direction = transform.position - playerShip.transform.position;
 
         if (Input.GetKey(KeyCode.LeftControl)) // Allows player to zoom in and out when LCtrl held down
         {
@@ -77,6 +77,7 @@ public class CameraControl : MonoBehaviour
             }
         }
 
+        Debug.Log(direction);
         Reset(currentDistance, direction);
     }
 
