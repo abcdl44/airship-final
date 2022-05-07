@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Progress : MonoBehaviour
 {
     private GameObject youWin;
     private GameObject player;
+
+    public Text progress;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +29,11 @@ public class Progress : MonoBehaviour
 
         if (numTurrets == 0 && numRockets == 0 && numEnemies == 0 && numSpawners == 0 && numGenerators == 0) {
             AudioListener.pause = true;
+            progress.gameObject.SetActive(false);
             youWin.SetActive(true);
             player.SetActive(false);
         }
+
+        progress.text = "Turrets remaining: " + numTurrets.ToString() + "\nMissiles remaining: " + numRockets.ToString() + "\nEnemy ships remaining: " + numEnemies.ToString() + "\nSpawners remaining: " + numSpawners.ToString() + "\nGenerators remaining: " + numGenerators.ToString();
     }
 }
