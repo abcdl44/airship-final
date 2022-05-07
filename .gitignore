@@ -38,3 +38,6 @@ sysinfo.txt
 *.log
 Airship Final/Logs/ApiUpdaterCheck.txt
 Airship Final/Logs/ApiUpdaterCheck.txt
+Airship Final/Logs/AssetImportWorker0.log
+Airship Final/Logs/AssetImportWorker0.log
+*.log
