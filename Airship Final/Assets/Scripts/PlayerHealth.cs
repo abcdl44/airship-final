@@ -5,15 +5,22 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 200;
+    public int numGuns = 3;
     GameObject player;
     ParticleSystem explosion;
 
     AudioSource ow;
     public AudioClip[] explosions;
 
+    public GameObject ugh;
+
     // Start is called before the first frame update
     void Start()
     {
+        health = ugh.GetComponent<Variables>().health;
+        numGuns = ugh.GetComponent<Variables>().guns;
+        Debug.Log(health);
+
         player = GameObject.Find("Player Ship");
         explosion = GetComponent<ParticleSystem>();
         explosion.Stop();

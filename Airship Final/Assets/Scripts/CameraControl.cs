@@ -57,7 +57,7 @@ public class CameraControl : MonoBehaviour
             direction = transform.position - playerShip.transform.position;
         }
 
-
+        /*
         if (Input.GetKey(KeyCode.LeftControl)) // Allows player to zoom in and out when LCtrl held down
         {
             float mouseY = Input.GetAxis("Mouse Y");
@@ -75,7 +75,7 @@ public class CameraControl : MonoBehaviour
                     currentDistance = minDistance + .01f;
                 }
             }
-        }
+        }*/ // DEP
         Reset(currentDistance, direction);
     }
 

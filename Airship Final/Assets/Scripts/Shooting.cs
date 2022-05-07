@@ -24,6 +24,8 @@ public class Shooting : MonoBehaviour
         blasterL = GameObject.Find("Left BlasterG Indicator"); //Need to edit once we have more weapons
         blasterR = GameObject.Find("Right BlasterG Indicator");
 
+        gunCount = playerShip.GetComponent<PlayerHealth>().numGuns;
+
         // default values should be 0
         reloadsLeft = new float[gunCount];
         reloadsRight = new float[gunCount];
