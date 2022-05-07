@@ -14,15 +14,25 @@ public class StartButton : MonoBehaviour
     private int hp = 200, guns = 3;
     public GameObject playerShip;
 
+    AudioSource sound;
+
     void Start()
     {
-        
-        BackClick();
+        sound = GetComponent<AudioSource>();
+
+        homePanel.SetActive(true);
+        start.SetActive(true);
+        quit.SetActive(true);
+        text.SetActive(true);
+
+        panel2.SetActive(false);
+        levelStart.SetActive(false);
+        back.SetActive(false);
     }
 
     public void LoadScene()
     {
-        
+        sound.Play();
         SceneManager.LoadScene("Boss");
 
         playerShip.GetComponent<Variables>().health = hp;
@@ -33,6 +43,7 @@ public class StartButton : MonoBehaviour
 
     public void StartClicked()
     {
+        sound.Play();
         homePanel.SetActive(false);
         start.SetActive(false);
         quit.SetActive(false);
@@ -54,11 +65,13 @@ public class StartButton : MonoBehaviour
 
     public void QuitClick()
     {
+        sound.Play();
         Application.Quit();
     }
 
     public void BackClick()
     {
+        sound.Play();
         homePanel.SetActive(true);
         start.SetActive(true);
         quit.SetActive(true);
@@ -71,6 +84,7 @@ public class StartButton : MonoBehaviour
 
     public void plusHPClick()
     {
+        sound.Play();
         hp += 50;
         if (hp == 500)
         {
@@ -82,6 +96,7 @@ public class StartButton : MonoBehaviour
 
     public void minusHPClick()
     {
+        sound.Play();
         hp -= 50;
         if (hp == 200)
         {
@@ -93,6 +108,7 @@ public class StartButton : MonoBehaviour
 
     public void plusGunClick()
     {
+        sound.Play();
         guns += 1;
         if (guns == 5)
         {
@@ -105,6 +121,7 @@ public class StartButton : MonoBehaviour
 
     public void minusGunClick()
     {
+        sound.Play();
         guns -= 1;
         if (guns == 1)
         {
