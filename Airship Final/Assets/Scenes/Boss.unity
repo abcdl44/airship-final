@@ -21707,7 +21707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &494335585
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27207,7 +27207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 2929013610536636786, guid: 33a83752da67c4944980955ea8627485, type: 3}
   reloadTime: 120
-  delay: 10
+  delay: 60
 --- !u!82 &711949137
 AudioSource:
   m_ObjectHideFlags: 0
@@ -38088,7 +38088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1071399737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38366,7 +38366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5789670917592022234, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 129.54277
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 5789670917592022234, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38399,6 +38399,14 @@ PrefabInstance:
     - target: {fileID: 5789670917592022234, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328598143343532691, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
+      propertyPath: m_Mass
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328598143343532691, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6328598144729470885, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_AnchorMax.y
@@ -49522,7 +49530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5789670917592022234, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 129.54277
+      value: 125.4
       objectReference: {fileID: 0}
     - target: {fileID: 5789670917592022234, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_LocalPosition.z
@@ -49555,6 +49563,14 @@ PrefabInstance:
     - target: {fileID: 5789670917592022234, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328598143343532691, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
+      propertyPath: m_Mass
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328598143343532691, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6328598144729470885, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_AnchorMax.y
@@ -50699,6 +50715,22 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 7393678067330186659, guid: dfa947209137d2e44a293a22f8622e1c, type: 3}
+      propertyPath: clips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393678067330186659, guid: dfa947209137d2e44a293a22f8622e1c, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8838ab34bcb89d641b1a601e22c02b9e, type: 3}
+    - target: {fileID: 7393678067330186659, guid: dfa947209137d2e44a293a22f8622e1c, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f14748033fadae948a6df80e28d743e7, type: 3}
+    - target: {fileID: 7393678067330186659, guid: dfa947209137d2e44a293a22f8622e1c, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 03359e2d26d51674ab1930bcb498303f, type: 3}
     - target: {fileID: 7393678067330186660, guid: dfa947209137d2e44a293a22f8622e1c, type: 3}
       propertyPath: m_Mass
       value: 10000

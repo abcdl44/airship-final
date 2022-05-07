@@ -12,16 +12,18 @@ public class Generator : MonoBehaviour
     {
         closestShip = FindClosestShip();
 
-        foreach (var blaster in closestShip.GetComponentsInChildren<EnemyBlaster>()) {
+        if (closestShip != null) {
+            foreach (var blaster in closestShip.GetComponentsInChildren<EnemyBlaster>()) {
             if (blaster.reloadTime == blaster.naturalReload) {
                 blaster.reloadTime /= reloadBuff;
             }
         }
 
-        if (GetComponent<EnemyHealth>().health == 0) {
-            foreach (var blaster in closestShip.GetComponentsInChildren<EnemyBlaster>()) {
-                if (blaster.reloadTime < blaster.naturalReload) {
-                    blaster.reloadTime *= reloadBuff;
+            if (GetComponent<EnemyHealth>().health == 0) {
+                foreach (var blaster in closestShip.GetComponentsInChildren<EnemyBlaster>()) {
+                    if (blaster.reloadTime < blaster.naturalReload) {
+                        blaster.reloadTime *= reloadBuff;
+                    }
                 }
             }
         }
