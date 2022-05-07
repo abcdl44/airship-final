@@ -13,10 +13,13 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip[] explosions;
 
     public GameObject ugh;
+    private GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameOver = GameObject.FindGameObjectWithTag("Game Over");
+        gameOver.SetActive(false);
         health = ugh.GetComponent<Variables>().health;
         numGuns = ugh.GetComponent<Variables>().guns;
         Debug.Log(health);
@@ -63,6 +66,8 @@ public class PlayerHealth : MonoBehaviour
         explosion.Play();   
         yield return new WaitForSeconds(1);
 
+        AudioListener.pause = true;
+        gameOver.SetActive(true);
         player.SetActive(false);
     }
 }
