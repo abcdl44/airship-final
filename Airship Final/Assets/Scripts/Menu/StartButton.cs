@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour
 {
     // this is actually just all buttons basically
-    public GameObject homePanel, panel2, start, quit, text, levelStart, back;
+    public GameObject homePanel, panel2, controlPanel, start, quit, text, levelStart, back, controls;
     public GameObject plusHP, minusHP, plusGun, minusGun;
     public Text hpText, gunText;
 
@@ -24,10 +24,13 @@ public class StartButton : MonoBehaviour
         start.SetActive(true);
         quit.SetActive(true);
         text.SetActive(true);
+        controls.SetActive(true);
 
         panel2.SetActive(false);
         levelStart.SetActive(false);
         back.SetActive(false);
+
+        controlPanel.SetActive(false);
     }
 
     public void LoadScene()
@@ -48,6 +51,7 @@ public class StartButton : MonoBehaviour
         start.SetActive(false);
         quit.SetActive(false);
         text.SetActive(false);
+        controls.SetActive(false);
 
         panel2.SetActive(true);
 
@@ -76,6 +80,7 @@ public class StartButton : MonoBehaviour
         start.SetActive(true);
         quit.SetActive(true);
         text.SetActive(true);
+        controls.SetActive(true);
 
         panel2.SetActive(false);
         levelStart.SetActive(false);
@@ -129,5 +134,31 @@ public class StartButton : MonoBehaviour
         }
         plusGun.SetActive(true);
         gunText.text = "Number of Guns: " + guns.ToString();
+    }
+
+    public void controlClick()
+    {
+        sound.Play();
+        
+        homePanel.SetActive(false);
+        start.SetActive(false);
+        quit.SetActive(false);
+        text.SetActive(false);
+        controls.SetActive(false);
+
+        controlPanel.SetActive(true);
+    }
+
+    public void controlBack()
+    {
+        sound.Play();
+
+        controlPanel.SetActive(false);
+
+        homePanel.SetActive(true);
+        start.SetActive(true);
+        quit.SetActive(true);
+        text.SetActive(true);
+        controls.SetActive(true);
     }
 }
