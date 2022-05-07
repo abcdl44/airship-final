@@ -15,6 +15,10 @@ TagManager:
   - Double Turret
   - Enemy Blaster
   - Game Over
+  - Enemy Ship
+  - You Win
+  - Spawner
+  - Generator
   layers:
   - Default
   - TransparentFX

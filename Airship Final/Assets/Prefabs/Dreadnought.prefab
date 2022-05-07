@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: -9043999006704339582}
   m_Layer: 0
   m_Name: Dreadnought
-  m_TagString: Untagged
+  m_TagString: Enemy Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10496,6 +10496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 2744929158855596004, guid: 3976fbd12c269544a90e855ab896db5d, type: 3}
   reloadTime: 1.6
+  naturalReload: 1.6
 --- !u!1001 &3133949411669423134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10689,3 +10690,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 2744929158855596004, guid: 3976fbd12c269544a90e855ab896db5d, type: 3}
   reloadTime: 1.5
+  naturalReload: 1.5

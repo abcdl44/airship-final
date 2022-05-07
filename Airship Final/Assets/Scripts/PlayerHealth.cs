@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 200;
-    public int numGuns = 3;
     GameObject player;
     ParticleSystem explosion;
 
@@ -21,8 +20,6 @@ public class PlayerHealth : MonoBehaviour
         gameOver = GameObject.FindGameObjectWithTag("Game Over");
         gameOver.SetActive(false);
         health = ugh.GetComponent<Variables>().health;
-        numGuns = ugh.GetComponent<Variables>().guns;
-        Debug.Log(health);
 
         player = GameObject.Find("Player Ship");
         explosion = GetComponent<ParticleSystem>();
