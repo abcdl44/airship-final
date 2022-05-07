@@ -21707,7 +21707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &494335585
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38088,7 +38088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1071399737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43769,6 +43769,22 @@ PrefabInstance:
     - target: {fileID: 1462141296041045373, guid: ff2617d3e6439bc479f7cc446ce7cf3f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462141296130149058, guid: ff2617d3e6439bc479f7cc446ce7cf3f, type: 3}
+      propertyPath: delay
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462141296243089751, guid: ff2617d3e6439bc479f7cc446ce7cf3f, type: 3}
+      propertyPath: delay
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462141296808306367, guid: ff2617d3e6439bc479f7cc446ce7cf3f, type: 3}
+      propertyPath: delay
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462141296833256439, guid: ff2617d3e6439bc479f7cc446ce7cf3f, type: 3}
+      propertyPath: delay
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1462141297072442120, guid: ff2617d3e6439bc479f7cc446ce7cf3f, type: 3}
       propertyPath: m_Constraints
