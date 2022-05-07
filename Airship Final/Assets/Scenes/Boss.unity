@@ -32419,7 +32419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
-  numGuns: 3
   explosions:
   - {fileID: 8300000, guid: 8838ab34bcb89d641b1a601e22c02b9e, type: 3}
   - {fileID: 8300000, guid: f14748033fadae948a6df80e28d743e7, type: 3}
@@ -50472,6 +50471,14 @@ PrefabInstance:
       propertyPath: playerShip
       value: 
       objectReference: {fileID: 919132147719090838}
+    - target: {fileID: 4648827096914273087, guid: 86077a8024f3dd34f8121a6adb2ca3da, type: 3}
+      propertyPath: ugh
+      value: 
+      objectReference: {fileID: 1177432502769363948, guid: 703f24150de0be04482f855eee751f61, type: 3}
+    - target: {fileID: 4648827096914273087, guid: 86077a8024f3dd34f8121a6adb2ca3da, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 1177432502769363948, guid: 703f24150de0be04482f855eee751f61, type: 3}
     - target: {fileID: 4648827096914273087, guid: 86077a8024f3dd34f8121a6adb2ca3da, type: 3}
       propertyPath: playerShip
       value: 

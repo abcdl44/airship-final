@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     public int gunCount;
     public float reloadTime;
     public float shipLength = 1.5f; // If we ever get ship customization we'll need to change this
+    public GameObject ugh;
 
     private float[] reloadsLeft;
     private float[] reloadsRight;
@@ -17,14 +18,14 @@ public class Shooting : MonoBehaviour
     private float[] gunPositions;
     private GameObject blasterL;
     private GameObject blasterR;
-
+     
     void Start()
     {
         //Initialize the reload indicators
         blasterL = GameObject.Find("Left BlasterG Indicator"); //Need to edit once we have more weapons
         blasterR = GameObject.Find("Right BlasterG Indicator");
 
-        gunCount = playerShip.GetComponent<PlayerHealth>().numGuns;
+        gunCount = ugh.GetComponent<Variables>().guns;
 
         // default values should be 0
         reloadsLeft = new float[gunCount];
