@@ -47,7 +47,7 @@ public class Shooting : MonoBehaviour
     // each gun has its own independent reload timer, when timer is 0 then gun is ready to pew pew
     void Update()
     {
-        // tick reload timers, might be inefficient but I'll only care if it lags
+        // tick reload timers
         float t = Time.deltaTime;
         for (int i = 0; i < gunCount; i++)
         {
@@ -131,7 +131,7 @@ public class Shooting : MonoBehaviour
             }
             else
             {
-                // holy shit close your eyes it's ugly
+                // ._.
                 playerShip.transform.Rotate(0, -90f, 0);
                 Vector3 v = playerShip.transform.forward;
                 playerShip.transform.Rotate(0, 90f, 0);
@@ -154,7 +154,7 @@ public class Shooting : MonoBehaviour
             }
             else
             {
-                // holy shit close your eyes it's ugly
+                // ._.
                 playerShip.transform.Rotate(0, 90f, 0);
                 Vector3 v = playerShip.transform.forward;
                 playerShip.transform.Rotate(0, -90f, 0);

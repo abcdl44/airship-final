@@ -56,26 +56,6 @@ public class CameraControl : MonoBehaviour
         {
             direction = transform.position - playerShip.transform.position;
         }
-
-        /*
-        if (Input.GetKey(KeyCode.LeftControl)) // Allows player to zoom in and out when LCtrl held down
-        {
-            float mouseY = Input.GetAxis("Mouse Y");
-            if (mouseY != 0)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, playerShip.transform.position, moveRate * mouseY);
-                currentDistance = Vector3.Distance(transform.position, playerShip.transform.position);
-
-                if (currentDistance > maxDistance)
-                {
-                    currentDistance = maxDistance - .01f;
-                }
-                if (currentDistance < minDistance)
-                {
-                    currentDistance = minDistance + .01f;
-                }
-            }
-        }*/ // DEP
         Reset(currentDistance, direction);
     }
 

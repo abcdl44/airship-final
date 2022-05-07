@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -69,11 +70,20 @@ public class PlayerHealth : MonoBehaviour
         ow.volume = 1.0f;
         ow.Play();
 
-        explosion.Play();   
-        yield return new WaitForSeconds(1);
+        explosion.Play();
 
-        AudioListener.pause = true;
+        yield return new WaitForSeconds(1f);
+
+        //AudioListener.pause = true;
         gameOver.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
+
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Menu");
+
         player.SetActive(false);
+
+        
     }
 }

@@ -535,7 +535,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5521,18 +5521,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4999996, y: 0.5719038, z: 2.3027534}
   m_Center: {x: 0, y: 0.3159519, z: 0.09861439}
---- !u!114 &176500643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176500637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4841faa3f767b93409a9e441ede040c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &176500644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10499,7 +10487,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -11509,7 +11497,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -16656,7 +16644,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -27558,7 +27546,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -32617,7 +32605,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -38394,6 +38382,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 6328598143343532696, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6328598144729470885, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -43453,7 +43445,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -49475,7 +49467,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -49573,6 +49565,10 @@ PrefabInstance:
     - target: {fileID: 6328598143343532691, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328598143343532696, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6328598144729470885, guid: b6f1cd9214e923b459ccccc3400c1843, type: 3}
       propertyPath: m_AnchorMax.y

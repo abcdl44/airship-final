@@ -98,7 +98,7 @@ public class StartButton : MonoBehaviour
     {
         sound.Play();
         hp -= 50;
-        if (hp == 200)
+        if (hp == 50)
         {
             minusHP.SetActive(false);
         }

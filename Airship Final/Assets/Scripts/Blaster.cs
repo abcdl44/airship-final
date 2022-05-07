@@ -5,11 +5,6 @@ using UnityEngine;
 public class Blaster : MonoBehaviour
 {
     public int offset = 10; //Imagined forward distance the gun looks to
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
