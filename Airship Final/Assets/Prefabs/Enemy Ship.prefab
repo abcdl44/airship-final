@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 8770765431147206234}
   m_Layer: 0
   m_Name: Enemy Ship
-  m_TagString: Untagged
+  m_TagString: Enemy Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10483,6 +10483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 2744929158855596004, guid: 15639f81a92b026479d4700945105434, type: 3}
   reloadTime: 1.9
+  naturalReload: 1.9
 --- !u!1001 &4136981218433541867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10664,3 +10665,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 2744929158855596004, guid: 15639f81a92b026479d4700945105434, type: 3}
   reloadTime: 2.1
+  naturalReload: 2.1

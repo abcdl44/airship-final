@@ -6,6 +6,7 @@ public class EnemyBlaster : MonoBehaviour
 {
     public GameObject projectile;
     public float reloadTime;
+    public float naturalReload;
    
     private float currReload;
     private GameObject player;

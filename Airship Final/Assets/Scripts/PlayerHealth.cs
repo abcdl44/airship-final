@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int health = 200;
     GameObject player;
     ParticleSystem explosion;
+    public Text displayHealth;
 
     AudioSource ow;
     public AudioClip[] explosions;
 
-    public GameObject ugh;
+    public GameObject prefs;
     private GameObject gameOver;
 
     // Start is called before the first frame update
@@ -19,13 +21,14 @@ public class PlayerHealth : MonoBehaviour
     {
         gameOver = GameObject.FindGameObjectWithTag("Game Over");
         gameOver.SetActive(false);
-        health = ugh.GetComponent<Variables>().health;
+        health = prefs.GetComponent<Variables>().health;
 
         player = GameObject.Find("Player Ship");
         explosion = GetComponent<ParticleSystem>();
         explosion.Stop();
 
         ow = (AudioSource)GetComponents(typeof(AudioSource))[2];
+        displayHealth.color = new Color32(255,179,58,255);
     }
 
     // Update is called once per frame
@@ -33,7 +36,13 @@ public class PlayerHealth : MonoBehaviour
     {
         //Debug.Log(health);
         if (health <= 0) {
+            displayHealth.gameObject.SetActive(false);
             StartCoroutine(Exploder());
+        }
+        displayHealth.text = health.ToString();
+
+        if (health <= 50) {
+            displayHealth.color = Color.red;
         }
     }
 
