@@ -13,6 +13,7 @@ TagManager:
   - Double Barrel
   - Turret
   - Double Turret
+  - Enemy Blaster
   layers:
   - Default
   - TransparentFX

@@ -10357,6 +10357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blasterJ Right
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ed550cbbf9612942883b4d390570bb7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy Blaster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed550cbbf9612942883b4d390570bb7, type: 3}
 --- !u!4 &4531530533821528692 stripped
@@ -10533,6 +10537,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2ed550cbbf9612942883b4d390570bb7, type: 3}
       propertyPath: m_Name
       value: blasterJ Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ed550cbbf9612942883b4d390570bb7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy Blaster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed550cbbf9612942883b4d390570bb7, type: 3}
